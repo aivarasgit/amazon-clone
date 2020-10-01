@@ -5,14 +5,14 @@ export const initialState = {
 		title: "Apple PC",
 		price: 555.20,
 		rating: 4,
-		image: ""
+		image: "https://m.media-amazon.com/images/I/41ExjPXUwLL._AC_SR160,160_.jpg"
 	},
 	{
 		id: "1234514",
 		title: "Apple PC",
 		price: 545.20,
 		rating: 3,
-		image: ""
+		image: "https://m.media-amazon.com/images/I/41ExjPXUwLL._AC_SR160,160_.jpg"
 	},], 
 	user: null
 };

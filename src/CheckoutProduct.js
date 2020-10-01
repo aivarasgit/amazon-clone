@@ -15,27 +15,28 @@ const CheckoutProduct=({id, price, title, rating, image})=>{
 		});
 	};
 	return(
-	<div className="checkoutProduct"> 
-		<img className="chechkoutProduct__image" src={image} alt=""/> 
-	<div className="checkoutProduct__info"> 
-		<p className="checkoutProduct__title">{title}</p>
-		<p className="checkoutProduct__price">
-			<small>$</small>
-			<strong>{price}</strong>
-		<p className="checkoutProduct__rating">
-		{
-			Array(rating).fill().map(
-			(_)=>(<p>*</p>)
-			)
-		}
-		</p>
+		<div className="checkoutProduct"> 
+			<div className="checkoutProduct__info"> 
+			<div className="checkoutProduct__title">{title}</
+			div>
+			<div className="checkoutProduct__price">
+				<small>$</small>
+				<strong>{price}</strong>
+			<div className="checkoutProduct__rating">
+			{
+				Array(rating).fill().map(
+				(_)=>(<p>*</p>)
+				)
+			}
+			</div>
 
-		<img src={image} alt="Acer"/>
-		
-		<button onClick={RemoveFromBasket}>Remove from the basket</button>
-			</p>
+			<img src={image} alt="Acer"/>
+			
+			<button className="product__button" onClick={RemoveFromBasket}>Remove from the basket</button>
+				</div>
+			</div>
 		</div>
-	</div>);
+	);
 
 }
 

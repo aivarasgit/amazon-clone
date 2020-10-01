@@ -1,7 +1,7 @@
 .header{
 	background-color: #131921;
 	display: flex;
-	align-item: center;
+	align-items: center;
 	position: sticky;
 	top: 0;
 	z-index: 100;

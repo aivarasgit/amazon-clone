@@ -18,7 +18,9 @@ function App() {
 				  <Route path="/checkout">
 				    {/* Header component from Header.js  */} 
 					<Header />
-					<Checkout />
+					 
+						<Checkout />
+				 
 				  </Route>
 
 				  <Route exact path="/">

@@ -2,8 +2,17 @@
 	padding: 10px;
 }
 
-.checkoutProduct{
+.checkout__cont{
 	display: flex;
+}
+
+.checkoutProduct{
+    width: 250px;
+	border: 1px dotted grey;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding: 5px;
+	background: #fff;
 }
 
 .checkoutProduct__info{
@@ -15,17 +24,17 @@
 	height: 180px;
 }
 
-.checkoutProduct__info > button{
-	background: #f0c14b;
-	border: 1px solid;
-	margin-top: 10px;
-	border-color: #a88734 #9c7e31 #846a29;
-	color: #111;
-}
-
 .checkoutProduct__title{
 	font-size: 17px;
-	font-weight: 800;
+    font-weight: 300;
+    width: 251px;
+    background: #f0c14b;
+    margin-left: -25px;
+    color: #fff;
+    padding-left: 9px;
+    padding-top: 3px;
+    padding: 0px 3px 3px 6px;
+    border-bottom: 1px solid #808080;
 }
 
 .checkoutProduct__price{
