@@ -17,7 +17,7 @@
 
 .header__optionBasket{
 	display: flex;
-        align-item: center;	
+    align-items: center;	
 }
 
 .header__basketCount{

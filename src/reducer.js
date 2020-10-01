@@ -30,8 +30,10 @@ const reducer = (state, action) => {
 		//Logic for removing from the basket 
 			//cloning the basket
 			let newBasket = [...state.basket];
+			 
+			let id = action.item.id;
 			const index = state.basket.findIndex(
-				(basketItem) => basketItem.id === action.id);
+				(basketItem) => basketItem.id === id);
 
 			if (index >= 0){
 				//item exists, remove it
