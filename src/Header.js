@@ -4,11 +4,30 @@ import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { useStateValue } from './StateProvider';
+import { auth } from "./firebase";
 
 function Header(){
 	
 	//useStateValue returns values , state { basket } is our basket [array of the values] and dispatch is for manipulation of the data layer delete, add, etc
-	const [{ basket }] = useStateValue();
+	const [{ basket }, user] = useStateValue();
+
+	let user1 = auth.currentUser;
+	const logout = () =>{
+		if (user) {
+			auth.signOut();
+		//	alert(json.stringify(user));
+		}
+	}
+
+	const user_show = () =>{
+		alert(user1);
+		
+		alert(user1.id);
+		alert(user1.name);
+		alert(user1.email);
+		alert(user1.password);
+	}
+
 	console.log(basket);
 	/*const AddToBasket = () =>{
 		dispatch({
@@ -34,10 +53,10 @@ function Header(){
 			{/* 4 Links */}
 			<div className="header__nav">
 			{/*1st Link */}
-				<Link to="/login" className="header__link">
-			        	<div className="header__option">
-						<span className="header__optionLineOne"> Hello Aiva </span>
-						<span className="header__optionLineTwo"> Sign in </span>
+				<Link to={!user && "/login"} className="header__link">
+			        	<div onClick={logout} className="header__option">
+						<span className="header__optionLineOne"> Hello, {user1? user1.email:"" }</span>
+						<span className="header__optionLineTwo" onClick={logout}> {user ? 'Sign in':'Sign out'} </span>
 					</div>
 				</Link>
 				{/* 2nd Link*/}		
@@ -45,6 +64,7 @@ function Header(){
 					<div className="header__option">
 						<span className="header__optionLineOne"> Returns </span>
 						<span className="header__optionLineTwo"> Orders </span>
+		<span onClick={user_show} >Testing</span>
 					</div>					                   </Link>
 			        {/*3rd Link */}
 				<Link to="/checkout" className="header__link"> 
@@ -60,6 +80,7 @@ function Header(){
 					
 					{/* Shopping basket icon */}
 					<ShoppingBasketIcon />
+					{ user.email }
 					{/* Number items in the basket */}
 					<span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
 					</div>
