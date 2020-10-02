@@ -1,6 +1,7 @@
 import React from "react";
 import "./Checkout.css";
 import CheckoutProduct from "./CheckoutProduct";
+import Subtotal from "./Subtotal";
 import { useStateValue } from "./StateProvider";
 
 function Checkout(){
@@ -32,12 +33,25 @@ function Checkout(){
 						rating={item.rating} 
 					/>))
 				}
+				
+			   { basket.length > 0 && (
+					<div className="checkout__right">
+						<h1> Subtotal </h1>
+						<Subtotal />
+					</div> )}
+					
 				</div>
+
 			</div>
+			
+			
 			)	
+			
 		}
 	</div>
+
 	);	
+
 }
 
 export default Checkout;
