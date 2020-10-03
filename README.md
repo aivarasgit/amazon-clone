@@ -1,4 +1,4 @@
-![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fbrentvollebregt%2Fhit-counter)
+<img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2aivarasgit%2amazon-clone" alt="Hits">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
